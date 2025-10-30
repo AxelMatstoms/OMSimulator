@@ -112,7 +112,7 @@ def parseParameterBindings(node, obj, resources):
       else:
         values = binding.find("ssd:ParameterValues", namespaces=namespace.ns)
         if values is not None:
-          param_set = values.find("ssv:ParameterSet", namespaces=namespace.ns)
+          param_set = values.find("ssd:ParameterSet", namespaces=namespace.ns)
           if param_set is not None:
             parameters = param_set.find("ssv:Parameters", namespaces=namespace.ns)
             parameterValues = parseParameterBindingHelper(parameters)
